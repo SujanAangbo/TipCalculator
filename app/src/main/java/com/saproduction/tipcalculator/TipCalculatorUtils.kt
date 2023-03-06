@@ -14,11 +14,11 @@ fun isNumber(str: String): Boolean {
         return true
     }
 
-    var char: Int = str[str.length - 1].code
+    val char: Int = str[str.length - 1].code
 
     Log.d("tag1", "${char - '0'.code}")
 
-    var num = char - '0'.code
+    val num = char - '0'.code
     return num in 0..9
 
 //    return when {
@@ -37,7 +37,7 @@ fun formatDecimal(num: String): String {
         return ""
     }
 
-    var format = DecimalFormat("##########################.##")
+    val format = DecimalFormat("##########################.##")
     return format.format(num.toDouble()).toString()
 
 
@@ -50,7 +50,7 @@ fun perHeadCost(totalCost: String, noOfPerson: Int, tipAmount: Float): String {
         return "0"
     }
 
-    var overallCost = totalCost.toLong() + tipAmount
+    val overallCost = totalCost.toLong() + tipAmount
     Log.d("tag", "after OverallCost : $overallCost")
     return (overallCost / noOfPerson).toString()
 

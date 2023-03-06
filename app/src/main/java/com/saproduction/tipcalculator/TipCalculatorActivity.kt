@@ -66,7 +66,7 @@ fun UserInput(
     sliderValueChanged: (Float) -> Unit
 ) {
 
-    var keyboardController = LocalSoftwareKeyboardController.current
+    val keyboardController = LocalSoftwareKeyboardController.current
     Card(modifier = Modifier.padding(8.dp), elevation = 10.dp) {
         Column(modifier = Modifier.padding(5.dp)) {
             OutlinedTextField(
